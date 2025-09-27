@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import "../css/navbar.css";
 import logo from "../assets/images/logo.png";
 
@@ -48,10 +49,10 @@ const Navbar = () => {
       <nav className="navbar">
         <div className="navbar-container">
           <div className="logo-container">
-            <a href="/" className="logo">
+            <Link to="/" className="logo">
               <img src={logo} alt="Raktarpan IIT Kanpur Logo" className="logo-img" />
               RAKTARPAN IIT KANPUR
-            </a>
+            </Link>
           </div>
 
           {/* Hamburger Menu Button */}
@@ -63,65 +64,30 @@ const Navbar = () => {
 
           <ul className={`nav-links ${isMenuOpen ? 'active' : ''}`}>
             <li>
-              <a href="/" onClick={closeMenu}>Home</a>
+              <Link to="/" onClick={closeMenu}>Home</Link>
             </li>
              <li>
-              <a href="#gallery" onClick={closeMenu}>
+              <Link to="/gallery" onClick={closeMenu}>
                 Gallery
 
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#about" onClick={closeMenu}>About Us</a>
+              <Link to="/about" onClick={closeMenu}>About Us</Link>
             </li>
            
             <li>
-              <a href="#camps" onClick={closeMenu}>Blood Camps</a>
+              <Link to="/camps" onClick={closeMenu}>Blood Camps</Link>
             </li>
             <li>
-              <a href="#contact" onClick={closeMenu}>Contact</a>
+              <Link to ="/Facts" onClick={closeMenu}>Blood Facts</Link>
             </li>
+           
           </ul>
         </div>
       </nav>
 
-      <section className="hero" id="home">
-        <div className="hero-container">
-          <div className="hero-content">
-            <div className="hero-badge">
-              <span>RAKTARPAN</span>
-            </div>
-            <h1>Be Someone's Lifeline</h1>
-            <h2>Save Lives Through Blood Donation at IIT Kanpur</h2>
-            <p>
-              Your single blood donation can save up to three precious lives. Join our mission 
-              to bridge the gap between donors and those in critical need. Find nearby blood camps, 
-              connect with verified donors, or request emergency blood assistance.
-            </p>
-            <div className="hero-stats">
-              <div className="stat">
-                <span className="stat-number">1000+</span>
-                <span className="stat-label">Lives Saved</span>
-              </div>
-              <div className="stat">
-                <span className="stat-number">500+</span>
-                <span className="stat-label">Active Donors</span>
-              </div>
-              <div className="stat">
-                <span className="stat-number">50+</span>
-                <span className="stat-label">Blood Camps</span>
-              </div>
-            </div>
-            <div className="hero-actions">
-              <a href="#camps" className="btn btn-primary">Find Blood Camps</a>
-              <a href="#about" className="btn btn-secondary" style={{color:"white"}}>Learn More</a>
-            </div>
-            <div className="hero-emergency">
-              <p>📞 <strong>Emergency Blood Request:</strong> +91 98765 BLOOD (24/7)</p>
-            </div>
-          </div>
-        </div>
-      </section>
+      
     </>
   );
 };

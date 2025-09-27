@@ -9,6 +9,14 @@ import {
   IoChevronBackOutline, 
   IoChevronForwardOutline 
 } from "react-icons/io5";
+import img1 from '../assets/images/img1.jpg';
+import img2 from '../assets/images/img2.jpg';
+import img3 from '../assets/images/img3.jpg';
+import img4 from '../assets/images/img4.jpg';
+import img5 from '../assets/images/img5.jpg';
+import img6 from '../assets/images/img6.jpg';
+import img7 from '../assets/images/img7.jpg';
+import img8 from '../assets/images/img8.jpg';
 
 const Gallery = () => {
   const [currentImage, setCurrentImage] = useState(0);
@@ -69,30 +77,47 @@ const Gallery = () => {
 
   const images = [
     {
-      src: 'https://images.pexels.com/photos/247478/pexels-photo-247478.jpeg?auto=compress&cs=tinysrgb&w=800',
-      alt: 'Beautiful mountain landscape',
-      title: 'Mountain Vista'
+      src: img5,
+      alt: 'Blood donation camp',
+      title: 'Life Saver Camp'
     },
     {
-      src: 'https://images.pexels.com/photos/371633/pexels-photo-371633.jpeg?auto=compress&cs=tinysrgb&w=800',
-      alt: 'Rolling green hills',
-      title: 'Green Hills'
+      src: img6,
+      alt: 'Volunteers at donation camp',
+      title: 'Helping Hands'
     },
     {
-      src: 'https://images.pexels.com/photos/414612/pexels-photo-414612.jpeg?auto=compress&cs=tinysrgb&w=800',
-      alt: 'Ocean sunset',
-      title: 'Ocean Sunset'
+      src: img7,
+      alt: 'Donor giving blood',
+      title: 'The Gift of Life'
     },
     {
-      src: 'https://images.pexels.com/photos/346529/pexels-photo-346529.jpeg?auto=compress&cs=tinysrgb&w=800',
-      alt: 'Forest path',
-      title: 'Forest Trail'
+      src: img8,
+      alt: 'Medical staff assisting donor',
+      title: 'Caring Professionals'
     },
     {
-      src: 'https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg?auto=compress&cs=tinysrgb&w=800',
-      alt: 'Desert landscape',
-      title: 'Desert Dunes'
+      src: img1,
+      alt: 'Blood donation awareness',
+      title: 'Spread the Word'
+    },
+    {
+      src: img2,
+      alt: 'Happy donor after giving blood',
+      title: 'Joy of Giving'
     }
+    ,
+    {
+      src: img3,
+      alt: 'Group of donors',
+      title: 'Community Spirit'
+    },
+    {
+      src: img4,
+      alt: 'Blood donation drive',
+      title: 'Together We Can'
+    }
+    
   ];
 
  const nextToImage = ()=>{

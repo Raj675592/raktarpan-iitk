@@ -28,43 +28,38 @@ function Footer() {
           <div className="footer-section">
             <h3>Contact Managers</h3>
             <div className="contact-info">
-              <div className="manager">
+              <div className="manager" >
                 <p>
-                  <strong>Antima Agrawal</strong> 
+                  <strong>Antima Agrawal</strong>
                 </p>
-                <p><i class='fas fa-envelope'></i> antima23@iitk.ac.in | <i class='fas fa-phone'></i> +91 90248 92379</p>
+                <p>
+                  <i class="fas fa-envelope"></i> antima23@iitk.ac.in |{" "}
+                  <i class="fas fa-phone"></i> +91 90248 92379
+                </p>
               </div>
               <div className="manager">
                 <p>
                   <strong>Seetaram Meena</strong>
                 </p>
-                <p><i class='fas fa-envelope'></i> seetaram23@iitk.ac.in | <i class='fas fa-phone'></i> +91 88907 30683</p>
+                <p>
+                  <i class="fas fa-envelope"></i> seetaram23@iitk.ac.in |{" "}
+                  <i class="fas fa-phone"></i> +91 88907 30683
+                </p>
               </div>
               <div className="manager">
                 <p>
-                  <strong>Anshika Makhija</strong> 
+                  <strong>Anshika Makhija</strong>
                 </p>
-                <p><i class='fas fa-envelope'></i> anshika23@iitk.ac.in | <i class='fas fa-phone'></i> +91 98765 43212</p>
-              </div>
-              <div className="emergency">
                 <p>
-                  <strong>Emergency:</strong> +91 98765 BLOOD (24/7)
+                  <i class="fas fa-envelope"></i> anshika23@iitk.ac.in |{" "}
+                  <i class="fas fa-phone"></i> +91 98765 43212
                 </p>
               </div>
+            
             </div>
           </div>
 
-          {/* Location Section */}
-          <div className="footer-section">
-            <h3>Location</h3>
-            <p>
-              📍 IIT Kanpur Campus
-              <br />
-              Kalyanpur, Kanpur - 208016
-              <br />
-              Uttar Pradesh, India
-            </p>
-          </div>
+       
         </div>
 
         <div className="footer-bottom">

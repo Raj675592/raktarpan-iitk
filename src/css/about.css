@@ -1,121 +1,232 @@
-/* About Section Styles */
+/* About Section - Simple & Consistent Design */
+
+/* Global Styles */
+:root {
+  --primary-color: #dc3545;
+  --primary-hover: #c82333;
+  --background-light: #f8f9fa;
+  --text-primary: #212529;
+  --text-secondary: #6c757d;
+  --border-color: #dee2e6;
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.1);
+  --radius-md: 0.75rem;
+  --radius-lg: 1rem;
+  --space-md: 1.5rem;
+  --space-lg: 2rem;
+  --transition-normal: 0.3s ease-out;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: var(--text-primary);
+  background-color: var(--background-light);
+}
+
+/* Main Container */
 .about-container {
-  max-width: 1200px;
+  max-width: 1000px;
   margin: 0 auto;
-  padding: 80px 20px;
-  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-  min-height: 100vh;
+  padding: var(--space-lg);
+  background-color: #ffffff;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  margin-top: var(--space-lg);
+  margin-bottom: var(--space-lg);
+}
+
+/* Headings */
+.about-container h1,
+.about-container h2 {
+  color: var(--primary-color);
+  text-align: center;
+  margin-bottom: var(--space-md);
 }
 
 .about-container h1 {
-  text-align: center;
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-weight: 700;
-  color: #dc3545;
-  margin-bottom: 2rem;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
-  position: relative;
 }
 
-.about-container h1::after {
-  content: '';
-  position: absolute;
-  bottom: -10px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 100px;
-  height: 4px;
-  background: linear-gradient(90deg, #dc3545, #e74c3c);
-  border-radius: 2px;
+.about-container h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  border-bottom: 2px solid var(--primary-color);
+  padding-bottom: 0.5rem;
+  margin-top: var(--space-lg);
 }
 
+/* Content */
 .about-content {
-  background: white;
-  border-radius: 15px;
-  padding: 40px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-  line-height: 1.8;
-  animation: fadeInUp 0.8s ease-out;
+  padding: var(--space-md) 0;
 }
 
 .about-content p {
   font-size: 1.1rem;
-  color: #000000;
-  margin-bottom: 1.5rem;
+  color: var(--text-secondary);
+  margin-bottom: var(--space-md);
   text-align: justify;
 }
 
-.about-content h2 {
-  font-size: 2rem;
-  font-weight: 600;
-  color: #dc3545;
-  margin: 2.5rem 0 1.5rem 0;
-  position: relative;
-  padding-left: 20px;
+/* Services Grid */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--space-md);
+  margin: var(--space-lg) 0;
 }
 
-.about-content h2::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 4px;
-  height: 30px;
-  background: linear-gradient(180deg, #dc3545, #e74c3c);
-  border-radius: 2px;
+.service-item {
+  background: var(--background-light);
+  padding: var(--space-md);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  text-align: center;
+  transition: var(--transition-normal);
 }
 
-.about-content p:first-of-type {
-  font-size: 1.2rem;
-  font-weight: 500;
-  color: #000000;
-  background: linear-gradient(135deg, #fff5f5, #ffe6e6);
-  padding: 20px;
-  border-radius: 10px;
-  border-left: 5px solid #dc3545;
-}
-
-/* Animation */
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* Hover effects */
-.about-content:hover {
+.service-item:hover {
   transform: translateY(-5px);
-  box-shadow: 0 15px 40px rgba(246, 2, 2, 0.7);
-  transition: all 0.3s ease;
+  box-shadow: var(--shadow-md);
+}
+
+.service-item h3 {
+  color: var(--primary-color);
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Lists */
+.benefits-list,
+.about-content ul:not(.benefits-list) {
+  list-style: none;
+  padding: 0;
+  margin: var(--space-md) 0;
+}
+
+.benefits-list li,
+.about-content ul:not(.benefits-list) li {
+  background: var(--background-light);
+  margin-bottom: 0.5rem;
+  padding: 1rem;
+  border-radius: var(--radius-md);
+  border-left: 4px solid var(--primary-color);
+}
+
+.benefits-list li strong,
+.about-content ul:not(.benefits-list) li strong {
+  color: var(--primary-color);
+}
+
+/* Eligibility Section */
+.eligibility-info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-md);
+  margin: var(--space-lg) 0;
+}
+
+.eligible-column,
+.ineligible-column {
+  background: var(--background-light);
+  padding: var(--space-md);
+  border-radius: var(--radius-md);
+}
+
+.eligible-column h3 {
+  color: #28a745;
+}
+
+.ineligible-column h3 {
+  color: var(--primary-color);
+}
+
+.eligible-column ul,
+.ineligible-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.eligible-column li,
+.ineligible-column li {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.eligible-column li:last-child,
+.ineligible-column li:last-child {
+  border-bottom: none;
+}
+
+/* Involvement Options */
+.involvement-options {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--space-md);
+  margin: var(--space-lg) 0;
+}
+
+.option-card {
+  background: var(--background-light);
+  padding: var(--space-md);
+  border-radius: var(--radius-md);
+  text-align: center;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition-normal);
+}
+
+.option-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+}
+
+.option-card h3 {
+  color: var(--primary-color);
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Contact Info */
+.contact-info-1 {
+  background: var(--primary-color);
+  color: #ffffff;
+  padding: var(--space-lg);
+  border-radius: var(--radius-md);
+  text-align: center;
+  margin-top: var(--space-lg);
+}
+
+.contact-info-1 h2 {
+  color: #ffffff;
+  border-bottom: none;
+}
+
+.contact-info-1 p {
+  color: #ffffff;
+  margin-bottom: 0.5rem;
+}
+
+.contact-info-1 strong {
+  color: #ffffff;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
   .about-container {
-    padding: 40px 15px;
+    padding: var(--space-md);
   }
-  
+
   .about-container h1 {
-    font-size: 2.2rem;
+    font-size: 2rem;
   }
-  
-  .about-content {
-    padding: 25px;
+
+  .about-container h2 {
+    font-size: 1.75rem;
   }
-  
-  .about-content h2 {
-    font-size: 1.6rem;
-  }
-  
-  .about-content p {
-    font-size: 1rem;
-    text-align: left;
+
+  .eligibility-info {
+    grid-template-columns: 1fr;
   }
 }
 
@@ -123,42 +234,13 @@
   .about-container h1 {
     font-size: 1.8rem;
   }
-  
-  .about-content {
-    padding: 20px;
+
+  .about-container h2 {
+    font-size: 1.5rem;
   }
-  
-  .about-content h2 {
-    font-size: 1.4rem;
+
+  .services-grid,
+  .involvement-options {
+    grid-template-columns: 1fr;
   }
 }
-
-/* Additional styling for better visual hierarchy */
-.about-content p:last-child {
-  margin-bottom: 0;
-  font-weight: 500;
-  color: #000000;
-}
-
-.about-container {
-  position: relative;
-  overflow: hidden;
-}
-
-.about-container::before {
-  content: '';
-  position: absolute;
-  top: -50%;
-  right: -20%;
-  width: 200px;
-  height: 200px;
-  background: radial-gradient(circle, rgba(220, 53, 69, 1) 0%, transparent 70%);
-  border-radius: 50%;
-  z-index: 0;
-}
-
-.about-content {
-  position: relative;
-  z-index: 1;
-}
-
