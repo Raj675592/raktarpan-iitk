@@ -105,7 +105,7 @@ function About(){
                     <h2>Contact Us</h2>
                     <p><strong>Email:</strong> raktarpan@iitk.ac.in</p>
                     <p><strong>Emergency Hotline:</strong> +91 98765 43212 (24/7)</p>
-                    <p><strong>Office:</strong> Student Activity Center, IIT Kanpur</p>
+
                 </div>
             </div>
            

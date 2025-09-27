@@ -63,7 +63,7 @@ function Home(){
         </div>
       </section> */}
 
-      {/* How It Works Section */}
+      {/* How It Works Section
       <section style={{ padding: "80px 0", background: "white" }}>
         <div style={{ maxWidth: "1200px", margin: "0 auto", padding: "0 20px" }}>
           <div style={{ textAlign: "center", marginBottom: "60px" }}>
@@ -102,10 +102,10 @@ function Home(){
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Blood Types Information */}
-      <section style={{ padding: "80px 0", background: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)", color: "white" }}>
+      <section style={{ padding: "80px 0", background: "linear-gradient(135deg, #f0f0f1ff 0%, #c55744ff 100%)", color: "white" }}>
         <div style={{ maxWidth: "1200px", margin: "0 auto", padding: "0 20px" }}>
           <div style={{ textAlign: "center", marginBottom: "60px" }}>
             <h2 style={{ fontSize: "3rem", marginBottom: "20px" }}>Blood Type Compatibility</h2>
