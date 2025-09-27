@@ -60,17 +60,28 @@ raktarpan/
 │   ├── components/        # React components
 │   │   ├── navbar.js      # Navigation component
 │   │   ├── About.js       # About section
+│   │   ├── Home.js        # Home Page
+│   │   ├── BloodFacts.js  # Blood Facts
 │   │   ├── BloodCamps.js  # Blood camps section
 │   │   ├── Footer.js      # Footer component
 │   │   └── gallery.js     # Gallery component
 │   ├── css/              # Component-specific styles
 │   │   ├── navbar.css
 │   │   ├── about.css
+│   │   ├── bloodfacts.css
 │   │   ├── bloodcamps.css
 │   │   └── footer.css
 │   ├── assets/           # Images and static assets
 │   │   └── images/
 │   │       ├── logo.png
+│   │       ├── img1.jpg
+│   │       ├── img2.jpg
+│   │       ├── img3.jpg
+│   │       ├── img4.jpg
+│   │       ├── img5.jpg
+│   │       ├── img6.jpg
+│   │       ├── img7.jpg
+│   │       ├── img8.jpg
 │   │       └── image.png
 │   ├── data/             # JSON data files
 │   │   └── bloodCampsData.json
