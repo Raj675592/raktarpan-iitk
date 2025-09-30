@@ -17,6 +17,14 @@ import img5 from '../assets/images/img5.jpg';
 import img6 from '../assets/images/img6.jpg';
 import img7 from '../assets/images/img7.jpg';
 import img8 from '../assets/images/img8.jpg';
+import img9 from '../assets/images/img9.jpg';
+import img10 from '../assets/images/img10.jpg';
+import img11 from '../assets/images/img11.jpg';
+import img12 from '../assets/images/img12.jpg';
+import img13 from '../assets/images/img13.jpg';
+import img14 from '../assets/images/img14.jpg';
+import img15 from '../assets/images/img15.jpg';
+import img16 from '../assets/images/img16.jpg';
 
 // Static images array
 const images = [
@@ -67,6 +75,54 @@ const images = [
     title: 'Caring Professionals',
     alt: 'Medical staff assisting blood donor',
     filename: 'img8.jpg'
+  },
+  {
+    src: img9,
+    title: 'Compassionate Care',
+    alt: 'Compassionate care during blood donation',
+    filename: 'img9.jpg'
+  },
+  {
+    src: img10,
+    title: 'Unity in Service',
+    alt: 'Unity in service - blood donation drive',
+    filename: 'img10.jpg'
+  },
+  {
+    src: img11,
+    title: 'Heroes Among Us',
+    alt: 'Everyday heroes donating blood',
+    filename: 'img11.jpg'
+  },
+  {
+    src: img12,
+    title: 'Save Lives Together',
+    alt: 'Community coming together to save lives',
+    filename: 'img12.jpg'
+  },
+  {
+    src: img13,
+    title: 'Blood Drive Success',
+    alt: 'Successful blood donation drive',
+    filename: 'img13.jpg'
+  },
+  {
+    src: img14,
+    title: 'Donors Making Impact',
+    alt: 'Blood donors making a real impact',
+    filename: 'img14.jpg'
+  },
+  {
+    src: img15,
+    title: 'Medical Excellence',
+    alt: 'Medical excellence in blood collection',
+    filename: 'img15.jpg'
+  },
+  {
+    src: img16,
+    title: 'Hope and Healing',
+    alt: 'Bringing hope and healing through donation',
+    filename: 'img16.jpg'
   }
 ];
 
@@ -143,8 +199,6 @@ const Gallery = () => {
   const goToImage = (index) => {
     setCurrentImage(index);
   };
-
-
 
   return (
     <div className="gallery-container" id="gallery">
