@@ -1,4 +1,4 @@
-import  { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import "../css/bloodcamps.css";
 import bloodCampsData from "../data/bloodCampsData.json";
 
@@ -15,13 +15,14 @@ const BloodCamps = () => {
       try {
         setLoading(true);
         setError(null);
-        
-        console.log('Loading blood camps from local data...');
-        
+
+        console.log("Loading blood camps from local data...");
+
         // Load data from imported JSON file
         setBloodCamps(bloodCampsData);
-        console.log(`Successfully loaded ${bloodCampsData.length} camps from local data`);
-        
+        console.log(
+          `Successfully loaded ${bloodCampsData.length} camps from local data`
+        );
       } catch (err) {
         console.error("Error loading blood camps:", err);
         setError(`Failed to load blood camps: ${err.message}`);
@@ -39,13 +40,14 @@ const BloodCamps = () => {
     try {
       setLoading(true);
       setError(null);
-      
-      console.log('Refreshing blood camps data from local file...');
-      
+
+      console.log("Refreshing blood camps data from local file...");
+
       // Reload data from imported JSON file
       setBloodCamps(bloodCampsData);
-      console.log(`Refreshed: ${bloodCampsData.length} camps loaded from local data`);
-      
+      console.log(
+        `Refreshed: ${bloodCampsData.length} camps loaded from local data`
+      );
     } catch (err) {
       console.error("Error refreshing blood camps:", err);
       setError(`Failed to refresh blood camps: ${err.message}`);
@@ -55,11 +57,13 @@ const BloodCamps = () => {
   };
 
   // Filter camps based on selected filter and search term
-  const filteredCamps = bloodCamps.filter(camp => {
-    const matchesFilter = selectedFilter === "all" || camp.status === selectedFilter;
-    const matchesSearch = camp.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         camp.location.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         camp.description.toLowerCase().includes(searchTerm.toLowerCase());
+  const filteredCamps = bloodCamps.filter((camp) => {
+    const matchesFilter =
+      selectedFilter === "all" || camp.status === selectedFilter;
+    const matchesSearch =
+      camp.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      camp.location.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      camp.description.toLowerCase().includes(searchTerm.toLowerCase());
     return matchesFilter && matchesSearch;
   });
 
@@ -67,7 +71,7 @@ const BloodCamps = () => {
     const statusClasses = {
       upcoming: "status-upcoming",
       urgent: "status-urgent",
-      completed: "status-completed"
+      completed: "status-completed",
     };
     return statusClasses[status] || "status-upcoming";
   };
@@ -76,17 +80,17 @@ const BloodCamps = () => {
     const statusTexts = {
       upcoming: "Upcoming",
       urgent: "Urgent",
-      completed: "Completed"
+      completed: "Completed",
     };
     return statusTexts[status] || "Upcoming";
   };
 
   const formatDate = (dateString) => {
     const date = new Date(dateString);
-    return date.toLocaleDateString('en-IN', {
-      day: 'numeric',
-      month: 'long',
-      year: 'numeric'
+    return date.toLocaleDateString("en-IN", {
+      day: "numeric",
+      month: "long",
+      year: "numeric",
     });
   };
 
@@ -118,10 +122,7 @@ const BloodCamps = () => {
             <i className="fas fa-exclamation-triangle"></i>
             <h3>Unable to Load Camps</h3>
             <p>{error}</p>
-            <button 
-              className="btn btn-primary"
-              onClick={handleRefresh}
-            >
+            <button className="btn btn-primary" onClick={handleRefresh}>
               <i className="fas fa-refresh"></i>
               Retry
             </button>
@@ -138,17 +139,19 @@ const BloodCamps = () => {
         <div className="camps-header">
           <div className="header-content">
             <h2>Blood Donation Camps</h2>
-            <p>Join our life-saving blood donation camps and be a hero in someone's story</p>
+            <p>
+              Join our life-saving blood donation camps and be a hero in
+              someone's story
+            </p>
             {/* Data Source Indicator */}
-           
           </div>
-          <button 
+          <button
             className="refresh-btn"
             onClick={handleRefresh}
             disabled={loading}
             title="Refresh camp data"
           >
-            <i className={`fas fa-sync-alt ${loading ? 'spinning' : ''}`}></i>
+            <i className={`fas fa-sync-alt ${loading ? "spinning" : ""}`}></i>
             Refresh
           </button>
         </div>
@@ -168,20 +171,26 @@ const BloodCamps = () => {
 
           <div className="filter-buttons">
             <button
-              className={`filter-btn ${selectedFilter === "all" ? "active" : ""}`}
+              className={`filter-btn ${
+                selectedFilter === "all" ? "active" : ""
+              }`}
               onClick={() => setSelectedFilter("all")}
             >
               All Camps
             </button>
             <button
-              className={`filter-btn ${selectedFilter === "upcoming" ? "active" : ""}`}
+              className={`filter-btn ${
+                selectedFilter === "upcoming" ? "active" : ""
+              }`}
               onClick={() => setSelectedFilter("upcoming")}
             >
               Upcoming
             </button>
-           
+
             <button
-              className={`filter-btn ${selectedFilter === "completed" ? "active" : ""}`}
+              className={`filter-btn ${
+                selectedFilter === "completed" ? "active" : ""
+              }`}
               onClick={() => setSelectedFilter("completed")}
             >
               Completed
@@ -192,7 +201,8 @@ const BloodCamps = () => {
         {/* Results Count */}
         <div className="results-count">
           <p>
-            Showing <strong>{filteredCamps.length}</strong> of <strong>{bloodCamps.length}</strong> camps
+            Showing <strong>{filteredCamps.length}</strong> of{" "}
+            <strong>{bloodCamps.length}</strong> camps
             {selectedFilter !== "all" && ` (${selectedFilter})`}
             {searchTerm && ` matching "${searchTerm}"`}
           </p>
@@ -200,15 +210,13 @@ const BloodCamps = () => {
 
         {/* Camps Grid */}
         <div className="camps-grid">
-          {filteredCamps.map(camp => (
+          {filteredCamps.map((camp) => (
             <div key={camp.id} className="camp-card">
-              
-                {/*camp status*/}
-                 <div className="camp-image">
-               <div className={`camp-status ${getStatusBadge(camp.status)}`}>
+              {/*camp status*/}
+              <div className="camp-image">
+                <div className={`camp-status ${getStatusBadge(camp.status)}`}>
                   {getStatusText(camp.status)}
                 </div>
-               
               </div>
 
               <div className="camp-content">
@@ -228,25 +236,10 @@ const BloodCamps = () => {
                     <i className="fas fa-map-marker-alt"></i>
                     <span>{camp.location}</span>
                   </div>
-                  {/* <div className="detail-item">
-                    <i className="fas fa-users"></i>
-                    <span>Organized by {camp.organizer}</span>
-                  </div> */}
+                
                 </div>
 
-                {/* Progress Bar
-                <div className="camp-progress">
-                  <div className="progress-info">
-                    <span>Registered: {camp.registeredDonors}/{camp.targetDonors}</span>
-                    <span>{Math.round(getProgressPercentage(camp.registeredDonors, camp.targetDonors))}%</span>
-                  </div>
-                  <div className="progress-bar">
-                    <div 
-                      className="progress-fill"
-                      style={{ width: `${getProgressPercentage(camp.registeredDonors, camp.targetDonors)}%` }}
-                    ></div>
-                  </div>
-                </div> */}
+                
 
                 {/* Requirements */}
                 <div className="camp-requirements">
@@ -257,24 +250,17 @@ const BloodCamps = () => {
                     ))}
                   </ul>
                 </div>
- 
-
 
                 {/* Actions */}
                 <div className="camp-actions">
-                 
                   {camp.status !== "completed" && (
                     <a href={`tel:${camp.contact}`} className="btn btn-primary">
-                    <i className="fas fa-phone"></i>
-                    Contact For Registration: {camp.contact}
-                  </a>
-                   )}
-
+                      <i className="fas fa-phone"></i>
+                      Contact For Registration: {camp.contact}
+                    </a>
+                  )}
                 </div>
-              
-                
               </div>
-               
             </div>
           ))}
         </div>
@@ -291,13 +277,18 @@ const BloodCamps = () => {
         {/* Call to Action */}
         <div className="camps-cta">
           <h3>Want to Organize a Blood Camp?</h3>
-          <p>Contact our team to organize a blood donation camp at your location</p>
+          <p>
+            Contact our team to organize a blood donation camp at your location
+          </p>
           <div className="cta-buttons">
             <a href="tel:+9190248 92379" className="btn btn-primary">
               <i className="fas fa-phone"></i>
               Call Us
             </a>
-            <a href="mailto:raktarpaniitkanpur@gmail.com" className="btn btn-secondary">
+            <a
+              href="mailto:raktarpaniitkanpur@gmail.com"
+              className="btn btn-secondary"
+            >
               <i className="fas fa-envelope"></i>
               Email Us
             </a>
