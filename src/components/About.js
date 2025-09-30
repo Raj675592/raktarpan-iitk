@@ -104,7 +104,7 @@ function About(){
                 <div className="contact-info-1" >
                     <h2>Contact Us</h2>
                     <p><strong>Email:</strong> raktarpaniitkanpur@gmail.com</p>
-                    <p><strong>Emergency Hotline:</strong> +91 98765 43212 (24/7)</p>
+                    <p><strong>Emergency Hotline:</strong> +91 63954 85144 (24/7)</p>
 
                 </div>
             </div>

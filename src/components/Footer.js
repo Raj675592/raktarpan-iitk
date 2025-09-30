@@ -52,7 +52,7 @@ function Footer() {
                 </p>
                 <p>
                   {/* <i class="fas fa-envelope"></i> anshika23@iitk.ac.in |{" "} */}
-                  <i class="fas fa-phone"></i> +91 98765 43212
+                  <i class="fas fa-phone"></i> +91 63954 85144
                 </p>
               </div>
             

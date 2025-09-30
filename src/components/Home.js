@@ -23,7 +23,7 @@ function Home(){
               <Link to="/about" className="btn btn-secondary" style={{color:"white", padding: "18px 40px", fontSize: "1.2rem"}}>Learn More</Link>
             </div>
             <div className="hero-emergency" style={{ padding: "25px 35px", borderRadius: "15px", fontSize: "1.2rem" }}>
-              <p style={{ color: "white" }}>📞 <strong style={{ color: "white" }}>Emergency Blood Request:</strong> 0512 259 7777</p>
+              <p style={{ color: "white" }}>📞 <strong style={{ color: "white" }}>Emergency Blood Request:</strong> +91 63954 85144</p>
             </div>
           </div>
         </div>
@@ -72,7 +72,7 @@ function Home(){
           <div style={{ marginTop: "50px", padding: "30px", background: "rgba(231,76,60,0.1)", borderRadius: "15px", border: "1px solid rgba(231,76,60,0.3)" }}>
             <h4 style={{ fontSize: "1.3rem", marginBottom: "15px" }}>🆘 Emergency Blood Request</h4>
             <p style={{ fontSize: "1.1rem", opacity: "0.9" }}>
-              For urgent blood requirements, call our 24/7 helpline: <strong>+91 98765 43212</strong>
+              For urgent blood requirements, call our 24/7 helpline: <strong>+91 63954 85144</strong>
             </p>
           </div>
         </div>
