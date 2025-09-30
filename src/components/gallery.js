@@ -1,7 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { 
-  BiCaretRightCircle, 
-  BiCaretLeftCircle, 
   BiPlayCircle, 
   BiPauseCircle 
 } from "react-icons/bi";
@@ -9,6 +7,8 @@ import {
   IoChevronBackOutline, 
   IoChevronForwardOutline 
 } from "react-icons/io5";
+
+// Import static images
 import img1 from '../assets/images/img1.jpg';
 import img2 from '../assets/images/img2.jpg';
 import img3 from '../assets/images/img3.jpg';
@@ -18,16 +18,68 @@ import img6 from '../assets/images/img6.jpg';
 import img7 from '../assets/images/img7.jpg';
 import img8 from '../assets/images/img8.jpg';
 
+// Static images array
+const images = [
+  {
+    src: img1,
+    title: 'Blood Donation Awareness',
+    alt: 'Blood donation awareness campaign',
+    filename: 'img1.jpg'
+  },
+  {
+    src: img2,
+    title: 'Joy of Giving',
+    alt: 'Happy donor after giving blood',
+    filename: 'img2.jpg'
+  },
+  {
+    src: img3,
+    title: 'Community Spirit',
+    alt: 'Group of donors showing community spirit',
+    filename: 'img3.jpg'
+  },
+  {
+    src: img4,
+    title: 'Together We Can',
+    alt: 'Blood donation drive - together we can save lives',
+    filename: 'img4.jpg'
+  },
+  {
+    src: img5,
+    title: 'Life Saver Camp',
+    alt: 'Blood donation camp saving lives',
+    filename: 'img5.jpg'
+  },
+  {
+    src: img6,
+    title: 'Helping Hands',
+    alt: 'Volunteers helping at donation camp',
+    filename: 'img6.jpg'
+  },
+  {
+    src: img7,
+    title: 'The Gift of Life',
+    alt: 'Donor giving the gift of life',
+    filename: 'img7.jpg'
+  },
+  {
+    src: img8,
+    title: 'Caring Professionals',
+    alt: 'Medical staff assisting blood donor',
+    filename: 'img8.jpg'
+  }
+];
+
 const Gallery = () => {
   const [currentImage, setCurrentImage] = useState(0);
   const [autoPlay, setAutoPlay] = useState(true);
   const [popUp, setPopUp] = useState(false);
 
-
-  React.useEffect(() => {
+  // Auto-play slideshow
+  useEffect(() => {
     let interval;
 
-    if (autoPlay) {
+    if (autoPlay && images.length > 0) {
       interval = setInterval(() => {
         setCurrentImage((prevIndex) => (prevIndex + 1) % images.length);
       }, 3000);
@@ -39,9 +91,9 @@ const Gallery = () => {
   }, [autoPlay]);
 
   // Keyboard navigation for popup
-  React.useEffect(() => {
+  useEffect(() => {
     const handleKeyPress = (e) => {
-      if (popUp) {
+      if (popUp && images.length > 0) {
         switch(e.key) {
           case 'Escape':
             setPopUp(false);
@@ -50,7 +102,7 @@ const Gallery = () => {
             prevImage();
             break;
           case 'ArrowRight':
-            nextToImage();
+            nextImage();
             break;
           case ' ':
             e.preventDefault();
@@ -75,61 +127,23 @@ const Gallery = () => {
     };
   }, [popUp, autoPlay]);
 
-  const images = [
-    {
-      src: img5,
-      alt: 'Blood donation camp',
-      title: 'Life Saver Camp'
-    },
-    {
-      src: img6,
-      alt: 'Volunteers at donation camp',
-      title: 'Helping Hands'
-    },
-    {
-      src: img7,
-      alt: 'Donor giving blood',
-      title: 'The Gift of Life'
-    },
-    {
-      src: img8,
-      alt: 'Medical staff assisting donor',
-      title: 'Caring Professionals'
-    },
-    {
-      src: img1,
-      alt: 'Blood donation awareness',
-      title: 'Spread the Word'
-    },
-    {
-      src: img2,
-      alt: 'Happy donor after giving blood',
-      title: 'Joy of Giving'
+  // Navigation functions
+  const nextImage = () => {
+    if (images.length > 0) {
+      setCurrentImage((prevIndex) => (prevIndex + 1) % images.length);
     }
-    ,
-    {
-      src: img3,
-      alt: 'Group of donors',
-      title: 'Community Spirit'
-    },
-    {
-      src: img4,
-      alt: 'Blood donation drive',
-      title: 'Together We Can'
-    }
-    
-  ];
-
- const nextToImage = ()=>{
-    setCurrentImage((prevIndex) => (prevIndex+1)%images.length);
-
- }
- const prevImage =()=>{
-    setCurrentImage((prevIndex)=>(prevIndex-1+images.length) % images.length);
- }
-    const goToImage = (index) => {
-      setCurrentImage(index);
   };
+
+  const prevImage = () => {
+    if (images.length > 0) {
+      setCurrentImage((prevIndex) => (prevIndex - 1 + images.length) % images.length);
+    }
+  };
+
+  const goToImage = (index) => {
+    setCurrentImage(index);
+  };
+
 
 
   return (
@@ -147,9 +161,7 @@ const Gallery = () => {
             src={images[currentImage].src} 
             alt={images[currentImage].alt}
             className="main-image"
-            onClick={() => {
-              setPopUp(true);
-            }}
+            onClick={() => setPopUp(true)}
           />
           <div className="image-info">
             <h3>{images[currentImage].title}</h3>
@@ -166,16 +178,16 @@ const Gallery = () => {
           </div>
         </div>
         
-        <button className="nav-button next" onClick={nextToImage}>
+        <button className="nav-button next" onClick={nextImage}>
           <IoChevronForwardOutline />
         </button>
       </div>
 
-    
+      {/* Thumbnails */}
       <div className="thumbnails">
         {images.map((image, index) => (
           <img
-            key={index}
+            key={image.filename}
             src={image.src}
             alt={image.alt}
             className={`thumbnail ${index === currentImage ? 'active' : ''}`}
@@ -203,7 +215,7 @@ const Gallery = () => {
                 className="popup-image"
               />
               
-              <button className="popup-nav next" onClick={nextToImage}>
+              <button className="popup-nav next" onClick={nextImage}>
                 <IoChevronForwardOutline />
               </button>
             </div>
@@ -226,7 +238,7 @@ const Gallery = () => {
             <div className="popup-thumbnails">
               {images.map((image, index) => (
                 <img
-                  key={index}
+                  key={image.filename}
                   src={image.src}
                   alt={image.alt}
                   className={`popup-thumbnail ${index === currentImage ? 'active' : ''}`}

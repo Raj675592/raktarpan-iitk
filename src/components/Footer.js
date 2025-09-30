@@ -33,7 +33,7 @@ function Footer() {
                   <strong>Antima Agrawal</strong>
                 </p>
                 <p>
-                  <i class="fas fa-envelope"></i> antima23@iitk.ac.in |{" "}
+                  {/* <i class="fas fa-envelope"></i> antima23@iitk.ac.in |{" "} */}
                   <i class="fas fa-phone"></i> +91 90248 92379
                 </p>
               </div>
@@ -42,7 +42,7 @@ function Footer() {
                   <strong>Seetaram Meena</strong>
                 </p>
                 <p>
-                  <i class="fas fa-envelope"></i> seetaram23@iitk.ac.in |{" "}
+                  {/* <i class="fas fa-envelope"></i> seetaram23@iitk.ac.in |{" "} */}
                   <i class="fas fa-phone"></i> +91 88907 30683
                 </p>
               </div>
@@ -51,7 +51,7 @@ function Footer() {
                   <strong>Anshika Makhija</strong>
                 </p>
                 <p>
-                  <i class="fas fa-envelope"></i> anshika23@iitk.ac.in |{" "}
+                  {/* <i class="fas fa-envelope"></i> anshika23@iitk.ac.in |{" "} */}
                   <i class="fas fa-phone"></i> +91 98765 43212
                 </p>
               </div>

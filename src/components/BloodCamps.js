@@ -9,41 +9,46 @@ const BloodCamps = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
-  // Fetch blood camps data on component mount
+  // Load blood camps data from local JSON file
   useEffect(() => {
-    const fetchBloodCamps = async () => {
+    const loadBloodCamps = () => {
       try {
         setLoading(true);
-        // Simulate API call delay
-        await new Promise(resolve => setTimeout(resolve, 500));
-        
-        // Load data from JSON file
-        setBloodCamps(bloodCampsData);
         setError(null);
+        
+        console.log('Loading blood camps from local data...');
+        
+        // Load data from imported JSON file
+        setBloodCamps(bloodCampsData);
+        console.log(`Successfully loaded ${bloodCampsData.length} camps from local data`);
+        
       } catch (err) {
-        setError("Failed to load blood camps data. Please try again later.");
         console.error("Error loading blood camps:", err);
+        setError(`Failed to load blood camps: ${err.message}`);
+        setBloodCamps([]);
       } finally {
         setLoading(false);
       }
     };
 
-    fetchBloodCamps();
+    loadBloodCamps();
   }, []);
 
-  // Refresh function to reload data
-  const handleRefresh = async () => {
+  // Refresh function to reload data from local file
+  const handleRefresh = () => {
     try {
       setLoading(true);
       setError(null);
-      // Simulate API call delay
-      await new Promise(resolve => setTimeout(resolve, 500));
       
-      // Reload data from JSON file
+      console.log('Refreshing blood camps data from local file...');
+      
+      // Reload data from imported JSON file
       setBloodCamps(bloodCampsData);
+      console.log(`Refreshed: ${bloodCampsData.length} camps loaded from local data`);
+      
     } catch (err) {
-      setError("Failed to refresh blood camps data. Please try again later.");
       console.error("Error refreshing blood camps:", err);
+      setError(`Failed to refresh blood camps: ${err.message}`);
     } finally {
       setLoading(false);
     }
@@ -54,7 +59,7 @@ const BloodCamps = () => {
     const matchesFilter = selectedFilter === "all" || camp.status === selectedFilter;
     const matchesSearch = camp.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          camp.location.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         camp.organizer.toLowerCase().includes(searchTerm.toLowerCase());
+                         camp.description.toLowerCase().includes(searchTerm.toLowerCase());
     return matchesFilter && matchesSearch;
   });
 
@@ -134,6 +139,8 @@ const BloodCamps = () => {
           <div className="header-content">
             <h2>Blood Donation Camps</h2>
             <p>Join our life-saving blood donation camps and be a hero in someone's story</p>
+            {/* Data Source Indicator */}
+           
           </div>
           <button 
             className="refresh-btn"
@@ -172,12 +179,7 @@ const BloodCamps = () => {
             >
               Upcoming
             </button>
-            <button
-              className={`filter-btn ${selectedFilter === "urgent" ? "active" : ""}`}
-              onClick={() => setSelectedFilter("urgent")}
-            >
-              Urgent
-            </button>
+           
             <button
               className={`filter-btn ${selectedFilter === "completed" ? "active" : ""}`}
               onClick={() => setSelectedFilter("completed")}
@@ -200,11 +202,13 @@ const BloodCamps = () => {
         <div className="camps-grid">
           {filteredCamps.map(camp => (
             <div key={camp.id} className="camp-card">
-              <div className="camp-image">
-                <img src={camp.image} alt={camp.title} />
-                <div className={`camp-status ${getStatusBadge(camp.status)}`}>
+              
+                {/*camp status*/}
+                 <div className="camp-image">
+               <div className={`camp-status ${getStatusBadge(camp.status)}`}>
                   {getStatusText(camp.status)}
                 </div>
+               
               </div>
 
               <div className="camp-content">
@@ -224,13 +228,13 @@ const BloodCamps = () => {
                     <i className="fas fa-map-marker-alt"></i>
                     <span>{camp.location}</span>
                   </div>
-                  <div className="detail-item">
+                  {/* <div className="detail-item">
                     <i className="fas fa-users"></i>
                     <span>Organized by {camp.organizer}</span>
-                  </div>
+                  </div> */}
                 </div>
 
-                {/* Progress Bar */}
+                {/* Progress Bar
                 <div className="camp-progress">
                   <div className="progress-info">
                     <span>Registered: {camp.registeredDonors}/{camp.targetDonors}</span>
@@ -242,7 +246,7 @@ const BloodCamps = () => {
                       style={{ width: `${getProgressPercentage(camp.registeredDonors, camp.targetDonors)}%` }}
                     ></div>
                   </div>
-                </div>
+                </div> */}
 
                 {/* Requirements */}
                 <div className="camp-requirements">
@@ -253,6 +257,8 @@ const BloodCamps = () => {
                     ))}
                   </ul>
                 </div>
+ 
+
 
                 {/* Actions */}
                 <div className="camp-actions">
@@ -262,10 +268,13 @@ const BloodCamps = () => {
                     <i className="fas fa-phone"></i>
                     Contact For Registration: {camp.contact}
                   </a>
-                   
-                  )}
+                   )}
+
                 </div>
+              
+                
               </div>
+               
             </div>
           ))}
         </div>
@@ -288,7 +297,7 @@ const BloodCamps = () => {
               <i className="fas fa-phone"></i>
               Call Us
             </a>
-            <a href="mailto:antima23@iitk.ac.in" className="btn btn-secondary">
+            <a href="mailto:raktarpaniitkanpur@gmail.com" className="btn btn-secondary">
               <i className="fas fa-envelope"></i>
               Email Us
             </a>
