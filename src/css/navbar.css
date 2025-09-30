@@ -131,14 +131,9 @@
         text-align: center;
         color: rgb(250, 248, 248);
         
-         background: 
          
-          url('../assets/images/image.png');
         
-        /* Option 2: Use external blood donation themed image */
-        /* background: 
-          linear-gradient(135deg, rgba(220, 53, 69, 0.8) 0%, rgba(231, 76, 60, 0.8) 50%, rgba(192, 57, 43, 0.8) 100%),
-          url('https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=1200&h=800&fit=crop'); */
+      background-color: #c0392b;
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
@@ -146,6 +141,7 @@
         width: 100%;
         position: relative;
         overflow: hidden;
+        opacity:1;
       }
 
       .hero::before {
@@ -155,7 +151,7 @@
         left: 0;
         right: 0;
         bottom: 0;
-        background: rgba(0, 0, 0, 0.1);
+        background: rgba(0, 0, 0, 0.08);
         z-index: 1;
       }
 
