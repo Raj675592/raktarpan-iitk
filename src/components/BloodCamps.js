@@ -36,25 +36,7 @@ const BloodCamps = () => {
   }, []);
 
   // Refresh function to reload data from local file
-  const handleRefresh = () => {
-    try {
-      setLoading(true);
-      setError(null);
-
-      console.log("Refreshing blood camps data from local file...");
-
-      // Reload data from imported JSON file
-      setBloodCamps(bloodCampsData);
-      console.log(
-        `Refreshed: ${bloodCampsData.length} camps loaded from local data`
-      );
-    } catch (err) {
-      console.error("Error refreshing blood camps:", err);
-      setError(`Failed to refresh blood camps: ${err.message}`);
-    } finally {
-      setLoading(false);
-    }
-  };
+  
 
   // Filter camps based on selected filter and search term
   const filteredCamps = bloodCamps.filter((camp) => {
@@ -145,15 +127,7 @@ const BloodCamps = () => {
             </p>
             {/* Data Source Indicator */}
           </div>
-          <button
-            className="refresh-btn"
-            onClick={handleRefresh}
-            disabled={loading}
-            title="Refresh camp data"
-          >
-            <i className={`fas fa-sync-alt ${loading ? "spinning" : ""}`}></i>
-            Refresh
-          </button>
+         
         </div>
 
         {/* Search and Filter Section */}
