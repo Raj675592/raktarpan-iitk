@@ -1,4 +1,5 @@
 import './App.css';
+import { Analytics } from '@vercel/analytics/react';
 
 import Gallery from './components/gallery';
 import Navbar from './components/navbar';
@@ -22,6 +23,7 @@ function App() {
 
       </Routes>
       <Footer />
+      <Analytics />
     </>
   );
 }
