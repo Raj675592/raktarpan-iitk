@@ -221,11 +221,12 @@ const BloodCamps = () => {
           {filteredCamps.map((camp) => (
             <div key={camp.id} className="camp-card">
               {/*camp status*/}
-              <div className="camp-image">
-                <div className={`camp-status ${getStatusBadge(camp.status)}`}>
+            <div className="camp-image">
+ <div   className={`camp-status ${getStatusBadge(camp.status)}`}>
                   {getStatusText(camp.status)}
-                </div>
               </div>
+            </div>
+               
 
               <div className="camp-content">
                 <h3 className="camp-title">{camp.title}</h3>
