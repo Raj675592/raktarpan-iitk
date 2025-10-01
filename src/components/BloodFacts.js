@@ -76,21 +76,7 @@ const BloodFacts = () => {
           </div>
         </div>
 
-        {/* Emergency Numbers */}
-        <div className="emergency-section">
-          <div className="emergency-card">
-            <h3>🚨 Emergency Blood Request</h3>
-            <div className="emergency-numbers">
-              <div className="number-item">
-                <strong>IIT Kanpur:</strong> +91 98765 43212
-              </div>
-              <div className="number-item">
-                <strong>24/7 Helpline:</strong> +91 98765 BLOOD
-              </div>
-            </div>
-            <p>Available 24/7 for emergency blood requirements</p>
-          </div>
-        </div>
+      
       </div>
     </div>
   );

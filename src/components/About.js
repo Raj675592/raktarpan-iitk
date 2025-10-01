@@ -8,13 +8,14 @@ function About(){
             <h1>About Us</h1>
             <h1>Raktarpan at IIT Kanpur</h1>
             <div className="about-content">
-                <p>Raktarpan is a pioneering blood donation initiative at the Indian Institute of Technology Kanpur (IITK), committed to saving lives through voluntary blood donation. Established with the vision of creating a self-sufficient blood donation ecosystem, we bridge the gap between donors and those in critical need.</p>
-                
+                <p>Raktarpan is a student-led initiative under the National Service Scheme (NSS) and part of the Community Welfare Cell (CWC) of Students’ Gymkhana, IIT Kanpur. Founded in 2014 by Himanshu Agarwal, Raktarpan was launched to address the critical challenge of blood shortage in Kanpur and nearby regions.
+</p>
+                <p>As blood cannot be manufactured and depends entirely on voluntary donations, Raktarpan serves as a vital link between generous donors and patients in urgent need. Over the years, it has grown into a youth-driven movement that offers free and timely assistance, especially to the underprivileged. The name “Raktarpan” combines Rakt (blood) and Arpan (offering), reflecting its mission of selfless service and life-saving contribution.</p>
                 <h2>Our Mission</h2>
                 <p>To create awareness about blood donation, ensure a sustainable supply of blood for those in need within the IITK community and surrounding areas, and foster a culture of social responsibility among students, faculty, and staff.</p>
                 
                 <h2>Our Vision</h2>
-                <p>To become the leading blood donation platform in academic institutions across India, setting an example of how educational communities can contribute to healthcare and social welfare.</p>
+                <p>To create a society where no life is lost due to the unavailability of blood, by fostering a culture of voluntary blood donation and selfless service.</p>
                 
                 <h2>What We Do</h2>
                 <div className="services-grid">
@@ -30,10 +31,7 @@ function About(){
                         <h3>📚 Awareness Programs</h3>
                         <p>Educational workshops and seminars about blood donation myths, benefits, and importance.</p>
                     </div>
-                    <div className="service-item">
-                        <h3>🤝 Community Outreach</h3>
-                        <p>Partnerships with local hospitals and blood banks to maximize impact beyond campus boundaries.</p>
-                    </div>
+                   
                 </div>
                 
               
@@ -104,7 +102,7 @@ function About(){
                 <div className="contact-info-1" >
                     <h2>Contact Us</h2>
                     <p><strong>Email:</strong> raktarpaniitkanpur@gmail.com</p>
-                    <p><strong>Emergency Hotline:</strong> +91 63954 85144 (24/7)</p>
+                    <p><strong>Emergency Contact:</strong> +91 88907 30683</p>
 
                 </div>
             </div>

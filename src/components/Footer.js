@@ -28,12 +28,11 @@ function Footer() {
           <div className="footer-section">
             <h3>Contact Managers</h3>
             <div className="contact-info">
-              <div className="manager" >
+              <div className="manager">
                 <p>
-                  <strong>Antima Agrawal</strong>
+                  <strong>Antima Agarwal</strong>
                 </p>
                 <p>
-                  {/* <i class="fas fa-envelope"></i> antima23@iitk.ac.in |{" "} */}
                   <i class="fas fa-phone"></i> +91 90248 92379
                 </p>
               </div>
@@ -42,7 +41,6 @@ function Footer() {
                   <strong>Seetaram Meena</strong>
                 </p>
                 <p>
-                  {/* <i class="fas fa-envelope"></i> seetaram23@iitk.ac.in |{" "} */}
                   <i class="fas fa-phone"></i> +91 88907 30683
                 </p>
               </div>
@@ -51,15 +49,11 @@ function Footer() {
                   <strong>Anshika Makhija</strong>
                 </p>
                 <p>
-                  {/* <i class="fas fa-envelope"></i> anshika23@iitk.ac.in |{" "} */}
                   <i class="fas fa-phone"></i> +91 63954 85144
                 </p>
               </div>
-            
             </div>
           </div>
-
-       
         </div>
 
         <div className="footer-bottom">
