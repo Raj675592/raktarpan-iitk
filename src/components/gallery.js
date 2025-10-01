@@ -29,97 +29,97 @@ import img16 from '../assets/images/img16.jpg';
 // Static images array
 const images = [
   {
-    src: img1,
+    src: img9,
     title: 'Blood Donation Awareness',
     alt: 'Blood donation awareness campaign',
     filename: 'img1.jpg'
   },
   {
-    src: img2,
+    src: img10,
     title: 'Joy of Giving',
     alt: 'Happy donor after giving blood',
     filename: 'img2.jpg'
   },
   {
-    src: img3,
+    src: img11,
     title: 'Community Spirit',
     alt: 'Group of donors showing community spirit',
     filename: 'img3.jpg'
   },
   {
-    src: img4,
+    src: img12,
     title: 'Together We Can',
     alt: 'Blood donation drive - together we can save lives',
     filename: 'img4.jpg'
   },
   {
-    src: img5,
+    src: img13,
     title: 'Life Saver Camp',
     alt: 'Blood donation camp saving lives',
     filename: 'img5.jpg'
   },
   {
-    src: img6,
+    src: img14,
     title: 'Helping Hands',
     alt: 'Volunteers helping at donation camp',
     filename: 'img6.jpg'
   },
   {
-    src: img7,
+    src: img15,
     title: 'The Gift of Life',
     alt: 'Donor giving the gift of life',
     filename: 'img7.jpg'
   },
   {
-    src: img8,
+    src: img16,
     title: 'Caring Professionals',
     alt: 'Medical staff assisting blood donor',
     filename: 'img8.jpg'
   },
   {
-    src: img9,
+    src: img1,
     title: 'Compassionate Care',
     alt: 'Compassionate care during blood donation',
     filename: 'img9.jpg'
   },
   {
-    src: img10,
+    src: img2,
     title: 'Unity in Service',
     alt: 'Unity in service - blood donation drive',
     filename: 'img10.jpg'
   },
   {
-    src: img11,
+    src: img3,
     title: 'Heroes Among Us',
     alt: 'Everyday heroes donating blood',
     filename: 'img11.jpg'
   },
   {
-    src: img12,
+    src: img4,
     title: 'Save Lives Together',
     alt: 'Community coming together to save lives',
     filename: 'img12.jpg'
   },
   {
-    src: img13,
+    src: img5,
     title: 'Blood Drive Success',
     alt: 'Successful blood donation drive',
     filename: 'img13.jpg'
   },
   {
-    src: img14,
+    src: img6,
     title: 'Donors Making Impact',
     alt: 'Blood donors making a real impact',
     filename: 'img14.jpg'
   },
   {
-    src: img15,
+    src: img7,
     title: 'Medical Excellence',
     alt: 'Medical excellence in blood collection',
     filename: 'img15.jpg'
   },
   {
-    src: img16,
+    src: img8,
     title: 'Hope and Healing',
     alt: 'Bringing hope and healing through donation',
     filename: 'img16.jpg'
